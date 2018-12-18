@@ -15,6 +15,12 @@ public class DragLaunch : MonoBehaviour {
 		ball = GetComponent<Ball>();
 	}
 
+	public void MoveStart(float amount){
+		if(!ball.inPlay){
+			ball.transform.Translate (new Vector3 (amount, 0, 0));
+		}
+	}
+
 	public void DragStart(){
 		//capture time and position of dragstart(mouseclick)
 		dragStart = Input.mousePosition;
