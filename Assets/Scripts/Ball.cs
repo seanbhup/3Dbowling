@@ -12,12 +12,7 @@ public class Ball : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody>();
-		audioSource = GetComponent<AudioSource>();
-
-		Launch ();
-
-
-
+		rigidBody.useGravity = false;
 	}
 	
 	// Update is called once per frame
@@ -25,9 +20,12 @@ public class Ball : MonoBehaviour {
 		
 	}
 
-	public void Launch ()
+	public void Launch (Vector3 velocity)
 	{
-		rigidBody.velocity = launchVelocity;
+		rigidBody.useGravity = true;
+		rigidBody.velocity = velocity;
+		audioSource = GetComponent<AudioSource>();
 		audioSource.Play ();
+
 	}
 }
