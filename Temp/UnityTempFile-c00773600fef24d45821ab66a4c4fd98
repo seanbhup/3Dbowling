@@ -162,7 +162,8 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-'Assets/Ball.cs'
+'Assets/Scripts/Ball.cs'
+'Assets/Scripts/CameraControl.cs'
 'Assets/START Pack/Scripts/ActionMaster2.cs'
 'Assets/START Pack/Scripts/OurScoreDisplayTest1.cs'
 -r:'/Applications/Unity 2017/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
